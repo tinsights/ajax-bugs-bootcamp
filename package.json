@@ -1,5 +1,5 @@
 {
-  "name": "ajax-bugs-swe1",
+  "name": "ajax-bugs-bootcamp",
   "version": "1.0.0",
   "description": "",
   "main": ".eslintrc.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rocketacademy/ajax-bugs-swe1.git"
+    "url": "git+https://github.com/rocketacademy/ajax-bugs-bootcamp.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rocketacademy/ajax-bugs-swe1/issues"
+    "url": "https://github.com/rocketacademy/ajax-bugs-bootcamp/issues"
   },
-  "homepage": "https://github.com/rocketacademy/ajax-bugs-swe1#readme",
+  "homepage": "https://github.com/rocketacademy/ajax-bugs-bootcamp#readme",
   "devDependencies": {
     "eslint": "^7.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
