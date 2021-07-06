@@ -1,5 +1,52 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    // 5.POCE.2 : Bug report users
+    await queryInterface.createTable('users', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      email: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      password: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      created_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+    });
+
+    // 5.POCE.1 :Bug report
+    await queryInterface.createTable('features', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER,
+      },
+      name: {
+        type: Sequelize.STRING,
+      },
+      created_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+    });
+
     await queryInterface.createTable('bugs', {
       id: {
         allowNull: false,
@@ -19,6 +66,22 @@ module.exports = {
         allowNull: true,
         type: Sequelize.STRING,
       },
+      feature_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'features',
+          key: 'id',
+        },
+      },
+      user_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id',
+        },
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -31,6 +94,8 @@ module.exports = {
     });
   },
   down: async (queryInterface) => {
+    await queryInterface.dropTable('features');
     await queryInterface.dropTable('bugs');
+    await queryInterface.dropTable('users');
   },
 };

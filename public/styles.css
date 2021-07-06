@@ -1,0 +1,98 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.form-btn {
+  background-color: gray;
+  padding: 10px 20px;
+  color: lightpink;
+}
+
+.form-btn:hover {
+  background-color: black;
+}
+
+.buglist-container {
+  border: solid 2px;
+  margin-top: 40px;
+}
+
+.single-bug {
+  padding: 10px;
+  border-bottom: 1px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  width: 70%;
+
+  border-radius: 25px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black solid 1px;
+}
+
+.modal-body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.closeBtn {
+  color: grey;
+}
+
+.closeBtn:hover {
+  color: black;
+  cursor: pointer;
+}
+
+input {
+  margin: 10px;
+}
+
+.feature-div {
+  padding-top: 30px;
+  border-top: black solid 1px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.featureBtn {
+  background-color: blue;
+  color: white;
+}
+
+.selectedFeatureBtn {
+  background-color: red;
+}
+
+.submit-btn-div {
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.create-feature {
+  border: black solid 2px;
+  padding: 10px;
+  margin-top: 20px;
+}
