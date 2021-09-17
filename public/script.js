@@ -5,24 +5,22 @@ const bugForm = document.querySelector('#bugForm');
 const submitButton = document.querySelector('#submit');
 
 bugButton.addEventListener('click', (e) => {
-  bugForm.classList.toggle('hidden');
+  document.getElementsByClassName('popup')[0].classList.add('active');
 });
 
 submitButton.addEventListener('click', (e) => {
-  let inputs = [...document.querySelectorAll('input')];
-  console.log('inputs :>> ', inputs);
-  inputs = inputs.map((input) => input.value);
-  console.log('inputs :>> ', inputs);
   const dataToSend = {
-    problem: inputs[0],
-    errorText: inputs[1],
-    commit: inputs[2],
+    problem: document.getElementById('problem').value,
+    errorText: document.getElementById('errorText').value,
+    commit: document.getElementById('commit').value,
+    featureId: parseInt(document.querySelector('.feature-radio:checked').value),
   };
+  console.log('dataToSend :>> ', dataToSend);
   axios
     .post('/', dataToSend)
     .then((response) => {
       console.log('response.data :>> ', response.data);
     })
-    .then(bugForm.classList.toggle('hidden'))
+    .then(bugForm.classList.toggle('active'))
     .catch((err) => console.log('err :>> ', err));
 });
