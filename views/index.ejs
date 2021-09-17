@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bug Report</title>
+  </head>
+  <body>
+    <div class="container vh-100">
+      <div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="mb-3">
+          <button id="bugButton" class="btn btn-danger">Create a Bugform</button>
+        </div>
+        <div>
+          <div class="hidden" id="bugForm">
+            <input type="text" name="problem" id="problem" placeholder="problem" required />
+            <input type="text" name="errorText" id="errorText" placeholder="error text" />
+            <input type="text" name="commit" id="commit" placeholder="git commit" />
+            <div class="text-right">
+              <input type="radio" id="feature1" name="featureId" value="FEATURE 1" />
+              <label for="feature1">FEATURE 1</label><br />
+              <input type="radio" id="feature2" name="featureId" value="FEATURE 2" />
+              <label for="feature2">FEATURE 2</label><br />
+              <input type="radio" id="feature3" name="featureId" value="FEATURE 3" />
+              <label for="feature3">FEATURE 3</label>
+            </div>
+            <button id="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
