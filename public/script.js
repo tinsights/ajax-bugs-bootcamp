@@ -1,14 +1,19 @@
 console.log('Script loaded');
+console.log('loggedIn :>> ', loggedIn);
 
 const bugButton = document.querySelector('#bugButton');
 const bugForm = document.querySelector('#bugForm');
 const bugSubmit = document.querySelector('#submit');
-
+const bugContainer = document.getElementById('bug-container');
 const signupForm = document.getElementById('signup-form');
 const loginForm = document.getElementById('login-form');
 
 const signupBtn = document.getElementById('signup-btn');
 const loginBtn = document.getElementById('login-btn');
+
+if (loggedIn) {
+  bugContainer.classList.remove('hidden');
+}
 
 bugButton.addEventListener('click', () => {
   bugForm.classList.add('active');
@@ -52,7 +57,8 @@ bugSubmit.addEventListener('click', () => {
     .catch((err) => console.log('err :>> ', err));
 });
 
-signupBtn.addEventListener('click', () => {
+function signUp() {
+  console.log('HERE');
   const email = document.getElementById('signup-email').value;
   const password = document.getElementById('signup-password').value;
   const signUpData = {
@@ -73,7 +79,7 @@ signupBtn.addEventListener('click', () => {
       }
     })
     .catch((err) => console.log('err :>> ', err));
-});
+}
 
 loginBtn.addEventListener('click', () => {
   const email = document.getElementById('login-email').value;
@@ -92,6 +98,7 @@ loginBtn.addEventListener('click', () => {
       } else {
         loginForm.classList.remove('active');
         bugForm.classList.add('active');
+        bugContainer.classList.remove('hidden');
       }
     })
     .catch((err) => console.log('err :>> ', err));

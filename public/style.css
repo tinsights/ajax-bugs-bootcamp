@@ -4,6 +4,9 @@ body {
   background: #ddd;
   font-family: "Raleway";
 }
+.hidden {
+  display: none;
+}
 .center {
   position: absolute;
   top: 50%;
