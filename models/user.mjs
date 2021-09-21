@@ -1,34 +1,26 @@
-export default function initBugModel(sequelize, DataTypes) {
-  return sequelize.define('bug', {
+export default function initUserModel(sequelize, DataTypes) {
+  return sequelize.define('user', {
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    problem: {
+    email: {
       type: DataTypes.STRING,
-    },
-    errorText: {
-      type: DataTypes.STRING,
-    },
-    commit: {
-      type: DataTypes.STRING,
-    },
-    featureId: {
-      type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: 'features',
-        key: 'id',
+      unique: {
+        args: true,
+        msg: 'Email address already in use!',
+      },
+      validate: {
+        isEmail: true,
       },
     },
-    userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'users',
-        key: 'id',
+    password: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [6, 16],
       },
     },
     createdAt: {

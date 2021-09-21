@@ -16,32 +16,116 @@
     <title>Bug Report</title>
   </head>
   <body>
+    <div id="signup-form" class="popup left">
+      <!-- <div class="icon">
+        <i class="fa fa-check"></i>
+      </div> -->
+      <div class="title">Sign Up</div>
+      <div class="description row">
+        <div class="col-3">
+          <label for="signup-email">Email:</label>
+        </div>
+        <div class="col-9">
+          <input type="email" id="signup-email" />
+        </div>
+      </div>
+      <div class="description row">
+        <div class="col-3">
+          <label for="signup-password">Password:</label>
+        </div>
+        <div class="col-9">
+          <input type="password" id="signup-password" />
+        </div>
+      </div>
+      <div class="dismiss-btn">
+        <button class="dismiss-popup-btn">Dismiss</button>
+        <button id="signup-btn">Sign Up</button>
+      </div>
+    </div>
+    <div class="left">
+      <button id="open-signup-btn" class="btn btn-primary">Sign up</button>
+    </div>
     <div class="center">
-      <button id="bugButton" class="btn btn-primary">Create a Bugform</button>
+      <button id="bugButton" class="btn btn-primary">Bug Form</button>
     </div>
     <div>
       <div class="popup center" id="bugForm">
-        <input type="text" name="problem" id="problem" placeholder="problem" required />
-        <input type="text" name="errorText" id="errorText" placeholder="error text" />
-        <input type="text" name="commit" id="commit" placeholder="git commit" />
+        <div class="title">Bugsssssss</div>
+        <div class="row">
+          <div class="col-4">
+            <label for="problem">Problem:</label>
+          </div>
+          <div class="col-8"><input type="text" name="problem" id="problem" placeholder="problem" required /></div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <label for="errorText">Error Text:</label>
+          </div>
+          <div class="col-8"><input type="text" name="errorText" id="errorText" placeholder="error text" /></div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <label for="commit">Commit:</label>
+          </div>
+          <div class="col-8"><input type="text" name="commit" id="commit" placeholder="git commit" /></div>
+        </div>
+
         <div class="row">
           <div class="col-6 p-1 mt-1">
             <input class="form-check-input feature-radio" type="radio" id="feature1" name="featureId" value="1" />
-            <label class="form-check-label" for="feature1">FEATURE 1</label>
+            <label class="form-check-label" for="feature1">Messages</label>
           </div>
           <div class="col-6 p-1 mt-1">
             <input class="form-check-input feature-radio" type="radio" id="feature2" name="featureId" value="2" />
-            <label class="form-check-label" for="feature2">FEATURE 2</label>
-          </div>
-          <div class="col-6 p-1 mt-1">
-            <input class="form-check-input feature-radio" type="radio" id="feature3" name="featureId" value="3" />
-            <label class="form-check-label" for="feature3">FEATURE 3</label>
+            <label class="form-check-label" for="feature2">Login</label>
           </div>
         </div>
-        <div class="dismiss-btn"><button class="dismiss-btn">Dismiss</button></div>
-
-        <button id="submit" class="btn btn-warning">Submit</button>
+        <div class="row">
+          <div class="col-6 p-1 mt-1">
+            <input class="form-check-input feature-radio" type="radio" id="feature3" name="featureId" value="3" />
+            <label class="form-check-label" for="feature3">Navbar</label>
+          </div>
+          <div class="col-6 p-1 mt-1">
+            <input class="form-check-input feature-radio" type="radio" id="feature4" name="featureId" value="3" />
+            <label class="form-check-label" for="feature3">Other</label>
+          </div>
+        </div>
+        <div class="dismiss-btn">
+          <button class="dismiss-popup-btn">Dismiss</button>
+          <button id="submit" class="btn btn-warning">Submit</button>
+        </div>
       </div>
+    </div>
+    <div id="login-form" class="popup right">
+      <!-- <div class="icon">
+        <i class="fa fa-check"></i>
+      </div> -->
+      <div class="title">Login</div>
+      <div class="description">
+        <div class="description row">
+          <div class="col-3">
+            <label for="login-email">Email:</label>
+          </div>
+          <div class="col-9">
+            <input type="email" id="login-email" />
+          </div>
+        </div>
+        <div class="description row">
+          <div class="col-3">
+            <label for="login-password">Password:</label>
+          </div>
+          <div class="col-9">
+            <input type="password" id="login-password" />
+          </div>
+        </div>
+      </div>
+      <div class="dismiss-btn">
+        <button class="dismiss-popup-btn">Dismiss</button>
+        <button id="login-btn">Login</button>
+      </div>
+    </div>
+    <div class="right">
+      <button id="open-login-btn" class="btn btn-primary">Login</button>
     </div>
   </body>
   <script src="script.js"></script>
